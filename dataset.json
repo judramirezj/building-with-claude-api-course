@@ -1,11 +1,48 @@
 [
   {
-    "task": "Write a Python function that parses an AWS ARN (Amazon Resource Name) string and returns a dictionary containing the partition, service, region, account-id, and resource components. For example, 'arn:aws:s3:us-east-1:123456789012:bucket/my-bucket' should return {'partition': 'aws', 'service': 's3', 'region': 'us-east-1', 'account_id': '123456789012', 'resource': 'bucket/my-bucket'}."
+    "prompt_inputs": {
+      "height": "183",
+      "weight": "76",
+      "goal": "Maintain performance while improving body composition for competitive swimming",
+      "restrictions": "No dairy products, prefers whole foods over supplements"
+    },
+    "solution_criteria": [
+      "Includes meals strategically timed around morning and evening training sessions",
+      "Provides adequate calories and protein for a competitive swimmer training twice daily",
+      "Respects dairy-free restriction"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a competitive swimmer who trains twice daily and needs strategic meal timing around morning and evening workouts"
   },
   {
-    "task": "Create a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'my-company-logs'. The policy should allow s3:GetObject and s3:ListBucket actions."
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "92",
+      "goal": "Powerlifter in cutting phase - lose 0.5kg per week while maintaining strength, target 2000 calories daily with high protein intake",
+      "restrictions": "No dairy products, must track macros precisely"
+    },
+    "solution_criteria": [
+      "Provides meals totaling approximately 2000 calories",
+      "Contains at least 180g protein distributed across meals",
+      "Excludes all dairy products",
+      "Includes macro breakdown (protein/carbs/fats) for each meal"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a powerlifter in a cutting phase who requires high protein, low calorie meals with precise macro tracking"
   },
   {
-    "task": "Write a regular expression that validates AWS Access Key IDs. AWS Access Key IDs are exactly 20 characters long and consist of uppercase letters A-Z and numbers 2-7, always starting with 'AKIA' for standard access keys."
+    "prompt_inputs": {
+      "height": "175",
+      "weight": "68",
+      "goal": "Marathon race tomorrow morning at 7 AM, need optimal energy and avoid digestive issues during race",
+      "restrictions": "No dairy, avoid high fiber foods day before race"
+    },
+    "solution_criteria": [
+      "High carbohydrate emphasis throughout the day (60-70% of calories)",
+      "Light, easily digestible dinner with early timing (before 7 PM)",
+      "Includes pre-race breakfast 2-3 hours before start time"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a marathon runner who needs high carbohydrate intake and specific pre-race timing requirements"
   }
 ]

@@ -1,0 +1,337 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">3.7 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">0.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a marathon runner who needs high carbohydrate intake and specific pre-race timing requirements</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 68<br><strong>goal:</strong> Marathon race tomorrow morning at 7 AM, need optimal energy and avoid digestive issues during race<br><strong>restrictions:</strong> No dairy, avoid high fiber foods day before race</td>
+                <td class="criteria">• High carbohydrate emphasis throughout the day (60-70% of calories)<br>• Light, easily digestible dinner with early timing (before 7 PM)<br>• Includes pre-race breakfast 2-3 hours before start time</td>
+                <td class="output"><pre># Pre-Marathon Nutrition Plan
+
+Given that your marathon is **tomorrow morning at 7 AM**, here's your strategic eating plan:
+
+## TODAY (Race Eve)
+
+### Breakfast (Morning)
+- White rice or plain bagel with honey
+- Scrambled eggs or egg whites
+- Banana
+- Orange juice
+
+### Lunch (Midday)
+- White pasta or white rice with olive oil
+- Grilled chicken or baked fish
+- Well-cooked carrots or peeled zucchini
+- White bread
+
+### Dinner (Early - by 6 PM)
+- **Keep it simple and familiar**
+- More white pasta with marinara sauce (no chunks)
+- Plain chicken breast
+- Small portion of white potatoes
+- Avoid: vegetables, spices, heavy sauces
+
+### Throughout Day
+- Sip water consistently
+- Avoid alcohol and caffeine after noon
+- Stop eating by 7-8 PM
+
+## TOMORROW (Race Day)
+
+### Pre-Race Meal (3-4 hours before - 3-4 AM)
+- White bagel or toast with honey/jam
+- 1-2 bananas
+- Small portion of oatmeal made with water
+- Sports drink or diluted juice
+
+### 30-60 Minutes Before Start
+- Energy gel or 1 banana
+- Few sips of sports drink
+
+## Key Points
+- **Carb-load** today with 60-70% of calories from easily digestible carbs
+- **Avoid fiber, dairy, fatty foods** to prevent GI distress
+- **Stay hydrated** but don't overdo it
+- **Nothing new** - stick to foods you've tested in training
+
+Good luck with your marathon! 🏃‍♂️</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution violates all three mandatory requirements. It does not include a daily caloric total, does not provide a complete macronutrient breakdown (only mentions carb percentage without protein/fat or specific gram amounts), and does not specify exact portions (uses imprecise terms throughout). While the solution demonstrates good understanding of pre-marathon nutrition principles and meets the secondary criteria well, the complete absence of the mandatory quantitative elements results in automatic failure.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a competitive swimmer who trains twice daily and needs strategic meal timing around morning and evening workouts</td>
+                <td class="prompt-inputs"><strong>height:</strong> 183<br><strong>weight:</strong> 76<br><strong>goal:</strong> Maintain performance while improving body composition for competitive swimming<br><strong>restrictions:</strong> No dairy products, prefers whole foods over supplements</td>
+                <td class="criteria">• Includes meals strategically timed around morning and evening training sessions<br>• Provides adequate calories and protein for a competitive swimmer training twice daily<br>• Respects dairy-free restriction</td>
+                <td class="output"><pre># Nutrition Plan for Competitive Swimming Performance
+
+## Daily Targets
+- **Calories**: 3,000-3,500 (high energy demands from swimming)
+- **Protein**: 150-170g (2.0-2.2g/kg for muscle maintenance)
+- **Carbs**: 400-500g (5-6g/kg for training fuel)
+- **Fats**: 80-100g (healthy fats for hormone health)
+
+## What to Eat
+
+### Pre-Training (1-2 hours before)
+- Oatmeal with banana and almond butter
+- Rice cakes with avocado and eggs
+- Sweet potato with chicken and vegetables
+
+### Post-Training (within 30-60 min)
+- Salmon with quinoa and roasted vegetables
+- Chicken stir-fry with rice and mixed veggies
+- Tuna poke bowl with brown rice and edamame
+
+### Daily Protein Sources (dairy-free)
+- Fish (salmon, tuna, cod) - 4-6oz per meal
+- Chicken, turkey - lean options
+- Eggs - 3-4 daily
+- Legumes (lentils, chickpeas, black beans)
+- Tofu, tempeh
+
+### Carbohydrate Sources
+- Oats, quinoa, brown rice
+- Sweet potatoes, regular potatoes
+- Whole grain bread/pasta
+- Fruits (bananas, berries, dates)
+
+### Healthy Fats
+- Avocados
+- Nuts (almonds, walnuts, cashews)
+- Nut butters
+- Olive oil, coconut oil
+- Fatty fish (omega-3s)
+
+### Hydration & Recovery
+- Water: 3-4L daily, more on heavy training days
+- Coconut water (natural electrolytes)
+- Tart cherry juice (anti-inflammatory)
+
+## Sample Day
+
+**Breakfast**: Scrambled eggs (3), oatmeal with berries and walnuts, banana
+
+**Snack**: Apple with almond butter
+
+**Lunch**: Grilled chicken, quinoa bowl, mixed vegetables, olive oil dressing
+
+**Pre-workout**: Rice cakes with almond butter and honey
+
+**Post-workout**: Salmon, sweet potato, steamed broccoli
+
+**Dinner**: Turkey breast, brown rice, stir-fried vegetables
+
+**Evening**: Handful of nuts, fruit
+
+This approach prioritizes whole foods, supports your training demands, and helps improve body composition without dairy.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">The solution violates the mandatory requirement for 'exact portions and timing.' While it provides a caloric total and macronutrient breakdown, the sample day meals lack specific portion sizes (only eggs are quantified as '3'). Additionally, timing is completely absent - no specific times are given, and the solution doesn't demonstrate strategic meal timing around both morning and evening training sessions for a competitive swimmer training twice daily. The generic 'pre-workout' and 'post-workout' labels don't fulfill the requirement for exact timing or account for the twice-daily training schedule typical of competitive swimmers.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a powerlifter in a cutting phase who requires high protein, low calorie meals with precise macro tracking</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 92<br><strong>goal:</strong> Powerlifter in cutting phase - lose 0.5kg per week while maintaining strength, target 2000 calories daily with high protein intake<br><strong>restrictions:</strong> No dairy products, must track macros precisely</td>
+                <td class="criteria">• Provides meals totaling approximately 2000 calories<br>• Contains at least 180g protein distributed across meals<br>• Excludes all dairy products<br>• Includes macro breakdown (protein/carbs/fats) for each meal</td>
+                <td class="output"><pre># Cutting Phase Nutrition Plan for Powerlifter
+
+## Daily Macro Targets (2000 calories)
+- **Protein**: 180-200g (720-800 cal) - 40%
+- **Carbs**: 180-200g (720-800 cal) - 40% 
+- **Fat**: 45-50g (405-450 cal) - 20%
+
+## Sample Daily Meal Plan
+
+### Meal 1 - Breakfast (500 cal)
+- 4 whole eggs scrambled (280 cal, 24g P)
+- 80g oats with water (300 cal, 10g P, 54g C)
+- 1 banana (105 cal, 27g C)
+- Black coffee
+
+### Meal 2 - Pre-Training (450 cal)
+- 150g chicken breast (248 cal, 47g P)
+- 200g sweet potato (172 cal, 40g C)
+- 100g broccoli (30 cal)
+
+### Meal 3 - Post-Training (550 cal)
+- 180g lean beef (90/10) (340 cal, 45g P)
+- 150g white rice (195 cal, 42g C)
+- Mixed vegetables (15 cal)
+
+### Meal 4 - Dinner (500 cal)
+- 150g salmon (310 cal, 39g P, 14g F)
+- 150g quinoa (185 cal, 24g C, 6g P)
+- Green salad with lemon
+
+## Key Foods to Stock
+
+**Protein Sources:**
+- Chicken breast, lean beef, fish (salmon, tuna, cod)
+- Eggs
+- Protein powder (dairy-free: pea, rice, hemp blend)
+
+**Carb Sources:**
+- Rice (white/brown), oats, quinoa
+- Sweet potatoes, regular potatoes
+- Fruits (bananas, berries)
+
+**Fat Sources:**
+- Avocado, olive oil
+- Nuts/nut butters (measured)
+- Fatty fish
+
+**Vegetables (unlimited):**
+- Broccoli, spinach, peppers, asparagus, green beans
+
+## Timing Tips
+- Carbs around training (pre/post)
+- Protein spread across 4 meals (~45g each)
+- Track everything in MyFitnessPal or Cronometer
+
+Would you like meal prep strategies or specific adjustments?</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements by providing daily caloric total, macronutrient breakdown, and meals with exact portions and timing. It successfully excludes dairy and provides a structured plan. However, there are significant mathematical inconsistencies between stated meal calories/macros and the actual nutritional values of the listed foods. The meal totals don't add up correctly (individual meals sum to more than stated), and the protein target may not be fully met when foods are calculated precisely. These are substantial deficiencies in accuracy for a plan requiring precise macro tracking.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

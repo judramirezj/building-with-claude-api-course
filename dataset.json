@@ -1,48 +1,38 @@
 [
   {
     "prompt_inputs": {
-      "height": "183",
-      "weight": "76",
-      "goal": "Maintain performance while improving body composition for competitive swimming",
-      "restrictions": "No dairy products, prefers whole foods over supplements"
+      "content": "The digital divide in educational outcomes has widened significantly during remote learning periods. Students from households with reliable broadband access demonstrated 23% higher assessment scores compared to peers with limited connectivity. While curriculum designers explicitly integrated asynchronous learning modules to accommodate varying schedules, the data reveals that parental education levels\u2014rather than technological features\u2014emerged as the strongest predictor of student engagement. Schools in affluent districts reported 89% attendance in virtual sessions, whereas economically disadvantaged areas struggled with 54% participation rates. The shift to online platforms inadvertently exposed longstanding inequities in resource allocation."
     },
     "solution_criteria": [
-      "Includes meals strategically timed around morning and evening training sessions",
-      "Provides adequate calories and protein for a competitive swimmer training twice daily",
-      "Respects dairy-free restriction"
+      "Identifies explicit topics directly stated in the text (e.g., digital divide, remote learning, broadband access)",
+      "Identifies implicit topics suggested through context (e.g., socioeconomic inequality, educational equity)",
+      "Returns output as a JSON array of strings"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a competitive swimmer who trains twice daily and needs strategic meal timing around morning and evening workouts"
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Testing with a passage that has implicit vs. explicit topics, where some themes are directly stated while others are only suggested through context, to evaluate the prompt's ability to identify both obvious and subtle subjects"
   },
   {
     "prompt_inputs": {
-      "height": "178",
-      "weight": "92",
-      "goal": "Powerlifter in cutting phase - lose 0.5kg per week while maintaining strength, target 2000 calories daily with high protein intake",
-      "restrictions": "No dairy products, must track macros precisely"
+      "content": "Quantum decoherence represents a critical challenge in maintaining coherent superposition states necessary for quantum computation. The interaction between a quantum system and its environment induces entanglement with environmental degrees of freedom, leading to the apparent collapse of the wavefunction through a process described by the Lindblad master equation. Recent advances in topological quantum error correction, particularly surface codes and Majorana fermion-based approaches, have demonstrated potential for fault-tolerant quantum gates with error thresholds approaching 1%. Meanwhile, quantum entanglement dynamics in many-body systems exhibit emergent phenomena such as thermalization and eigenstate thermalization hypothesis violations in integrable systems. The preservation of Bell state fidelity in ion trap architectures relies on sympathetic cooling techniques and dynamical decoupling sequences that mitigate dephasing from magnetic field fluctuations."
     },
     "solution_criteria": [
-      "Provides meals totaling approximately 2000 calories",
-      "Contains at least 180g protein distributed across meals",
-      "Excludes all dairy products",
-      "Includes macro breakdown (protein/carbs/fats) for each meal"
+      "Extracts both high-level topics (e.g., quantum decoherence, quantum entanglement) and specialized subtopics (e.g., topological quantum error correction, surface codes, Majorana fermions)",
+      "Returns output as a valid JSON array of strings",
+      "Identifies at least 8 distinct topics or subtopics from the passage"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a powerlifter in a cutting phase who requires high protein, low calorie meals with precise macro tracking"
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Testing with a highly specialized passage containing domain-specific jargon and nested subtopics (e.g., quantum mechanics with subfields like entanglement, superposition, decoherence) to assess granularity of topic extraction"
   },
   {
     "prompt_inputs": {
-      "height": "175",
-      "weight": "68",
-      "goal": "Marathon race tomorrow morning at 7 AM, need optimal energy and avoid digestive issues during race",
-      "restrictions": "No dairy, avoid high fiber foods day before race"
+      "content": "The development of CRISPR-based gene therapies presents a complex intersection of bioethical considerations, regulatory frameworks, and market dynamics. The ability to edit germline cells raises profound questions about consent across generations and the moral boundaries of human enhancement versus disease treatment. Regulatory agencies worldwide face unprecedented challenges in establishing safety protocols for heritable genetic modifications, with the FDA and EMA developing divergent approval pathways that reflect cultural differences in risk tolerance. Meanwhile, venture capital investment in gene-editing startups reached $4.2 billion in 2022, driven by projections that the therapeutic genome editing market could exceed $15 billion by 2030. This commercialization pressure intersects with healthcare equity concerns, as initial treatments may cost upwards of $2 million per patient, potentially creating a genetic divide between socioeconomic classes. The debate extends into intellectual property law, where patent disputes over CRISPR technology involve competing claims from academic institutions and biotechnology firms, raising questions about whether fundamental biological tools should be privately owned or treated as common scientific heritage."
     },
     "solution_criteria": [
-      "High carbohydrate emphasis throughout the day (60-70% of calories)",
-      "Light, easily digestible dinner with early timing (before 7 PM)",
-      "Includes pre-race breakfast 2-3 hours before start time"
+      "Extracts topics spanning bioethics, technology policy, and economics domains",
+      "Returns valid JSON array of strings",
+      "Identifies at least 5 distinct topics from the passage"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a marathon runner who needs high carbohydrate intake and specific pre-race timing requirements"
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Testing with an interdisciplinary passage that spans multiple distinct fields (e.g., bio-ethics, technology policy, and economics) to verify the prompt can extract diverse topics from a single text"
   }
 ]

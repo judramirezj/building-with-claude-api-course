@@ -1,63 +1,53 @@
 [
   {
-    "output": "# Pre-Marathon Nutrition Plan\n\nGiven that your marathon is **tomorrow morning at 7 AM**, here's your strategic eating plan:\n\n## TODAY (Race Eve)\n\n### Breakfast (Morning)\n- White rice or plain bagel with honey\n- Scrambled eggs or egg whites\n- Banana\n- Orange juice\n\n### Lunch (Midday)\n- White pasta or white rice with olive oil\n- Grilled chicken or baked fish\n- Well-cooked carrots or peeled zucchini\n- White bread\n\n### Dinner (Early - by 6 PM)\n- **Keep it simple and familiar**\n- More white pasta with marinara sauce (no chunks)\n- Plain chicken breast\n- Small portion of white potatoes\n- Avoid: vegetables, spices, heavy sauces\n\n### Throughout Day\n- Sip water consistently\n- Avoid alcohol and caffeine after noon\n- Stop eating by 7-8 PM\n\n## TOMORROW (Race Day)\n\n### Pre-Race Meal (3-4 hours before - 3-4 AM)\n- White bagel or toast with honey/jam\n- 1-2 bananas\n- Small portion of oatmeal made with water\n- Sports drink or diluted juice\n\n### 30-60 Minutes Before Start\n- Energy gel or 1 banana\n- Few sips of sports drink\n\n## Key Points\n- **Carb-load** today with 60-70% of calories from easily digestible carbs\n- **Avoid fiber, dairy, fatty foods** to prevent GI distress\n- **Stay hydrated** but don't overdo it\n- **Nothing new** - stick to foods you've tested in training\n\nGood luck with your marathon! \ud83c\udfc3\u200d\u2642\ufe0f",
+    "output": "```json\n[\n\"Quantum decoherence\",\n\"Quantum computation\",\n\"Wavefunction collapse\",\n\"Lindblad master equation\",\n\"Topological quantum error correction\",\n\"Surface codes\",\n\"Majorana fermions\",\n\"Fault-tolerant quantum gates\",\n\"Quantum entanglement dynamics\",\n\"Many-body systems\",\n\"Thermalization\",\n\"Eigenstate thermalization hypothesis\",\n\"Integrable systems\",\n\"Bell state fidelity\",\n\"Ion trap architectures\",\n\"Sympathetic cooling\",\n\"Dynamical decoupling\",\n\"Dephasing\"\n]\n```",
     "test_case": {
       "prompt_inputs": {
-        "height": "175",
-        "weight": "68",
-        "goal": "Marathon race tomorrow morning at 7 AM, need optimal energy and avoid digestive issues during race",
-        "restrictions": "No dairy, avoid high fiber foods day before race"
+        "content": "Quantum decoherence represents a critical challenge in maintaining coherent superposition states necessary for quantum computation. The interaction between a quantum system and its environment induces entanglement with environmental degrees of freedom, leading to the apparent collapse of the wavefunction through a process described by the Lindblad master equation. Recent advances in topological quantum error correction, particularly surface codes and Majorana fermion-based approaches, have demonstrated potential for fault-tolerant quantum gates with error thresholds approaching 1%. Meanwhile, quantum entanglement dynamics in many-body systems exhibit emergent phenomena such as thermalization and eigenstate thermalization hypothesis violations in integrable systems. The preservation of Bell state fidelity in ion trap architectures relies on sympathetic cooling techniques and dynamical decoupling sequences that mitigate dephasing from magnetic field fluctuations."
       },
       "solution_criteria": [
-        "High carbohydrate emphasis throughout the day (60-70% of calories)",
-        "Light, easily digestible dinner with early timing (before 7 PM)",
-        "Includes pre-race breakfast 2-3 hours before start time"
+        "Extracts both high-level topics (e.g., quantum decoherence, quantum entanglement) and specialized subtopics (e.g., topological quantum error correction, surface codes, Majorana fermions)",
+        "Returns output as a valid JSON array of strings",
+        "Identifies at least 8 distinct topics or subtopics from the passage"
       ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Testing with a marathon runner who needs high carbohydrate intake and specific pre-race timing requirements"
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a highly specialized passage containing domain-specific jargon and nested subtopics (e.g., quantum mechanics with subfields like entanglement, superposition, decoherence) to assess granularity of topic extraction"
     },
-    "score": 2,
-    "reasoning": "The solution violates all three mandatory requirements. It does not include a daily caloric total, does not provide a complete macronutrient breakdown (only mentions carb percentage without protein/fat or specific gram amounts), and does not specify exact portions (uses imprecise terms throughout). While the solution demonstrates good understanding of pre-marathon nutrition principles and meets the secondary criteria well, the complete absence of the mandatory quantitative elements results in automatic failure."
+    "score": 10,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings, contains only topics without commentary, and presents the JSON array alone. It exceeds the minimum requirement of 8 topics with 18 entries, successfully extracting both high-level topics (quantum decoherence, quantum computation, quantum entanglement dynamics) and specialized subtopics (surface codes, Majorana fermions, sympathetic cooling, dynamical decoupling). All extracted topics are legitimately present in the source text. The minor weaknesses regarding granularity consistency do not detract from the overall quality of topic extraction."
   },
   {
-    "output": "# Nutrition Plan for Competitive Swimming Performance\n\n## Daily Targets\n- **Calories**: 3,000-3,500 (high energy demands from swimming)\n- **Protein**: 150-170g (2.0-2.2g/kg for muscle maintenance)\n- **Carbs**: 400-500g (5-6g/kg for training fuel)\n- **Fats**: 80-100g (healthy fats for hormone health)\n\n## What to Eat\n\n### Pre-Training (1-2 hours before)\n- Oatmeal with banana and almond butter\n- Rice cakes with avocado and eggs\n- Sweet potato with chicken and vegetables\n\n### Post-Training (within 30-60 min)\n- Salmon with quinoa and roasted vegetables\n- Chicken stir-fry with rice and mixed veggies\n- Tuna poke bowl with brown rice and edamame\n\n### Daily Protein Sources (dairy-free)\n- Fish (salmon, tuna, cod) - 4-6oz per meal\n- Chicken, turkey - lean options\n- Eggs - 3-4 daily\n- Legumes (lentils, chickpeas, black beans)\n- Tofu, tempeh\n\n### Carbohydrate Sources\n- Oats, quinoa, brown rice\n- Sweet potatoes, regular potatoes\n- Whole grain bread/pasta\n- Fruits (bananas, berries, dates)\n\n### Healthy Fats\n- Avocados\n- Nuts (almonds, walnuts, cashews)\n- Nut butters\n- Olive oil, coconut oil\n- Fatty fish (omega-3s)\n\n### Hydration & Recovery\n- Water: 3-4L daily, more on heavy training days\n- Coconut water (natural electrolytes)\n- Tart cherry juice (anti-inflammatory)\n\n## Sample Day\n\n**Breakfast**: Scrambled eggs (3), oatmeal with berries and walnuts, banana\n\n**Snack**: Apple with almond butter\n\n**Lunch**: Grilled chicken, quinoa bowl, mixed vegetables, olive oil dressing\n\n**Pre-workout**: Rice cakes with almond butter and honey\n\n**Post-workout**: Salmon, sweet potato, steamed broccoli\n\n**Dinner**: Turkey breast, brown rice, stir-fried vegetables\n\n**Evening**: Handful of nuts, fruit\n\nThis approach prioritizes whole foods, supports your training demands, and helps improve body composition without dairy.",
+    "output": "```json\n[\n\"Digital divide\",\n\"Educational outcomes\",\n\"Remote learning\",\n\"Broadband access\",\n\"Assessment scores\",\n\"Connectivity\",\n\"Asynchronous learning modules\",\n\"Parental education levels\",\n\"Student engagement\",\n\"Virtual session attendance\",\n\"Affluent districts\",\n\"Economically disadvantaged areas\",\n\"Participation rates\",\n\"Online learning platforms\",\n\"Educational inequities\",\n\"Resource allocation\"\n]\n```",
     "test_case": {
       "prompt_inputs": {
-        "height": "183",
-        "weight": "76",
-        "goal": "Maintain performance while improving body composition for competitive swimming",
-        "restrictions": "No dairy products, prefers whole foods over supplements"
+        "content": "The digital divide in educational outcomes has widened significantly during remote learning periods. Students from households with reliable broadband access demonstrated 23% higher assessment scores compared to peers with limited connectivity. While curriculum designers explicitly integrated asynchronous learning modules to accommodate varying schedules, the data reveals that parental education levels\u2014rather than technological features\u2014emerged as the strongest predictor of student engagement. Schools in affluent districts reported 89% attendance in virtual sessions, whereas economically disadvantaged areas struggled with 54% participation rates. The shift to online platforms inadvertently exposed longstanding inequities in resource allocation."
       },
       "solution_criteria": [
-        "Includes meals strategically timed around morning and evening training sessions",
-        "Provides adequate calories and protein for a competitive swimmer training twice daily",
-        "Respects dairy-free restriction"
+        "Identifies explicit topics directly stated in the text (e.g., digital divide, remote learning, broadband access)",
+        "Identifies implicit topics suggested through context (e.g., socioeconomic inequality, educational equity)",
+        "Returns output as a JSON array of strings"
       ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Testing with a competitive swimmer who trains twice daily and needs strategic meal timing around morning and evening workouts"
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a passage that has implicit vs. explicit topics, where some themes are directly stated while others are only suggested through context, to evaluate the prompt's ability to identify both obvious and subtle subjects"
     },
-    "score": 3,
-    "reasoning": "The solution violates the mandatory requirement for 'exact portions and timing.' While it provides a caloric total and macronutrient breakdown, the sample day meals lack specific portion sizes (only eggs are quantified as '3'). Additionally, timing is completely absent - no specific times are given, and the solution doesn't demonstrate strategic meal timing around both morning and evening training sessions for a competitive swimmer training twice daily. The generic 'pre-workout' and 'post-workout' labels don't fulfill the requirement for exact timing or account for the twice-daily training schedule typical of competitive swimmers."
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics without extra commentary. It successfully identifies both explicit topics (digital divide, remote learning, broadband access, parental education levels, etc.) and implicit topics (educational inequities, resource allocation). While there are minor issues with granularity and some potential redundancy, these are relatively minor concerns that don't significantly detract from the overall quality of the extraction."
   },
   {
-    "output": "# Cutting Phase Nutrition Plan for Powerlifter\n\n## Daily Macro Targets (2000 calories)\n- **Protein**: 180-200g (720-800 cal) - 40%\n- **Carbs**: 180-200g (720-800 cal) - 40% \n- **Fat**: 45-50g (405-450 cal) - 20%\n\n## Sample Daily Meal Plan\n\n### Meal 1 - Breakfast (500 cal)\n- 4 whole eggs scrambled (280 cal, 24g P)\n- 80g oats with water (300 cal, 10g P, 54g C)\n- 1 banana (105 cal, 27g C)\n- Black coffee\n\n### Meal 2 - Pre-Training (450 cal)\n- 150g chicken breast (248 cal, 47g P)\n- 200g sweet potato (172 cal, 40g C)\n- 100g broccoli (30 cal)\n\n### Meal 3 - Post-Training (550 cal)\n- 180g lean beef (90/10) (340 cal, 45g P)\n- 150g white rice (195 cal, 42g C)\n- Mixed vegetables (15 cal)\n\n### Meal 4 - Dinner (500 cal)\n- 150g salmon (310 cal, 39g P, 14g F)\n- 150g quinoa (185 cal, 24g C, 6g P)\n- Green salad with lemon\n\n## Key Foods to Stock\n\n**Protein Sources:**\n- Chicken breast, lean beef, fish (salmon, tuna, cod)\n- Eggs\n- Protein powder (dairy-free: pea, rice, hemp blend)\n\n**Carb Sources:**\n- Rice (white/brown), oats, quinoa\n- Sweet potatoes, regular potatoes\n- Fruits (bananas, berries)\n\n**Fat Sources:**\n- Avocado, olive oil\n- Nuts/nut butters (measured)\n- Fatty fish\n\n**Vegetables (unlimited):**\n- Broccoli, spinach, peppers, asparagus, green beans\n\n## Timing Tips\n- Carbs around training (pre/post)\n- Protein spread across 4 meals (~45g each)\n- Track everything in MyFitnessPal or Cronometer\n\nWould you like meal prep strategies or specific adjustments?",
+    "output": "```json\n[\n\"CRISPR-based gene therapies\",\n\"Bioethical considerations\",\n\"Regulatory frameworks\",\n\"Market dynamics\",\n\"Germline cell editing\",\n\"Intergenerational consent\",\n\"Human enhancement\",\n\"Disease treatment\",\n\"Safety protocols\",\n\"Heritable genetic modifications\",\n\"FDA approval pathways\",\n\"EMA approval pathways\",\n\"Venture capital investment\",\n\"Gene-editing startups\",\n\"Therapeutic genome editing market\",\n\"Commercialization pressure\",\n\"Healthcare equity\",\n\"Socioeconomic genetic divide\",\n\"Intellectual property law\",\n\"CRISPR patent disputes\",\n\"Scientific heritage\"\n]\n```",
     "test_case": {
       "prompt_inputs": {
-        "height": "178",
-        "weight": "92",
-        "goal": "Powerlifter in cutting phase - lose 0.5kg per week while maintaining strength, target 2000 calories daily with high protein intake",
-        "restrictions": "No dairy products, must track macros precisely"
+        "content": "The development of CRISPR-based gene therapies presents a complex intersection of bioethical considerations, regulatory frameworks, and market dynamics. The ability to edit germline cells raises profound questions about consent across generations and the moral boundaries of human enhancement versus disease treatment. Regulatory agencies worldwide face unprecedented challenges in establishing safety protocols for heritable genetic modifications, with the FDA and EMA developing divergent approval pathways that reflect cultural differences in risk tolerance. Meanwhile, venture capital investment in gene-editing startups reached $4.2 billion in 2022, driven by projections that the therapeutic genome editing market could exceed $15 billion by 2030. This commercialization pressure intersects with healthcare equity concerns, as initial treatments may cost upwards of $2 million per patient, potentially creating a genetic divide between socioeconomic classes. The debate extends into intellectual property law, where patent disputes over CRISPR technology involve competing claims from academic institutions and biotechnology firms, raising questions about whether fundamental biological tools should be privately owned or treated as common scientific heritage."
       },
       "solution_criteria": [
-        "Provides meals totaling approximately 2000 calories",
-        "Contains at least 180g protein distributed across meals",
-        "Excludes all dairy products",
-        "Includes macro breakdown (protein/carbs/fats) for each meal"
+        "Extracts topics spanning bioethics, technology policy, and economics domains",
+        "Returns valid JSON array of strings",
+        "Identifies at least 5 distinct topics from the passage"
       ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Testing with a powerlifter in a cutting phase who requires high protein, low calorie meals with precise macro tracking"
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with an interdisciplinary passage that spans multiple distinct fields (e.g., bio-ethics, technology policy, and economics) to verify the prompt can extract diverse topics from a single text"
     },
-    "score": 6,
-    "reasoning": "The solution meets all mandatory requirements by providing daily caloric total, macronutrient breakdown, and meals with exact portions and timing. It successfully excludes dairy and provides a structured plan. However, there are significant mathematical inconsistencies between stated meal calories/macros and the actual nutritional values of the listed foods. The meal totals don't add up correctly (individual meals sum to more than stated), and the protein target may not be fully met when foods are calculated precisely. These are substantial deficiencies in accuracy for a plan requiring precise macro tracking."
+    "score": 10,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings, contains only topics without commentary, and presents nothing but the JSON array. It successfully identifies well over 5 distinct topics (21 total) spanning the required domains of bioethics (germline editing, consent, enhancement), technology policy (regulatory frameworks, FDA/EMA, safety protocols), and economics (venture capital, market dynamics, healthcare equity). While the granularity could be debated, the criteria do not specify a maximum number of topics or require consolidation, and all extracted topics are legitimately present in the source text."
   }
 ]

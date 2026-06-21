@@ -140,94 +140,101 @@
             <tbody>
     
             <tr>
-                <td>Testing with a historical literature review passage that references multiple theories, scholars, and time periods to evaluate whether the model extracts thematic topics rather than just proper nouns or citation information</td>
-                <td class="prompt-inputs"><strong>content:</strong> The evolution of organizational learning theory demonstrates a complex intellectual trajectory spanning several decades. Argyris and Schön's seminal work in the 1970s introduced the distinction between single-loop and double-loop learning, fundamentally challenging prevailing assumptions about adaptive behavior in institutions. This framework was subsequently extended by Senge's systems thinking approach in the 1990s, which emphasized mental models and shared vision as critical components of learning organizations. Meanwhile, the knowledge management perspective, championed by Nonaka and Takeuchi, shifted focus toward tacit and explicit knowledge conversion processes, drawing heavily on Japanese manufacturing practices. Critics like Easterby-Smith have questioned whether organizational learning constitutes a coherent paradigm or merely a collection of loosely related concepts, while recent scholarship has increasingly integrated cognitive psychology and social constructivism to explain collective learning phenomena.</td>
-                <td class="criteria">• Extracts thematic topics (e.g., organizational learning, knowledge management) rather than just scholar names or time periods<br>• Includes major theoretical concepts mentioned in the passage<br>• Returns output as a JSON array of strings</td>
+                <td>Testing with an interdisciplinary social sciences passage that blends psychology, economics, and public policy topics to verify the prompt can identify overlapping themes across multiple academic domains</td>
+                <td class="prompt-inputs"><strong>content:</strong> Behavioral economics research demonstrates that cognitive biases significantly influence financial decision-making among low-income households, with implications for welfare policy design. Loss aversion, first documented by Kahneman and Tversky, manifests when individuals weight potential losses approximately 2.5 times more heavily than equivalent gains, leading to suboptimal savings behavior and risk avoidance in investment decisions. This psychological phenomenon intersects with structural economic constraints: households earning below 200% of the federal poverty line face liquidity constraints that rational choice theory alone cannot explain. Policymakers have responded by implementing nudge-based interventions, such as automatic enrollment in retirement savings programs and simplified application processes for public assistance, which leverage insights from cognitive psychology to improve program uptake rates by 40-60%. However, critics argue these paternalistic approaches may undermine individual autonomy while failing to address underlying income inequality and systemic barriers to economic mobility.</td>
+                <td class="criteria">• Identifies topics spanning psychology, economics, and public policy domains<br>• Extracts topics as a JSON array of strings</td>
                 <td class="output"><pre>```json
 [
-"Organizational learning theory",
-"Single-loop learning",
-"Double-loop learning",
-"Adaptive behavior in institutions",
-"Systems thinking",
-"Mental models",
-"Shared vision",
-"Learning organizations",
-"Knowledge management",
-"Tacit knowledge",
-"Explicit knowledge",
-"Knowledge conversion processes",
-"Japanese manufacturing practices",
+"Behavioral economics",
+"Cognitive biases",
+"Financial decision-making",
+"Low-income households",
+"Welfare policy design",
+"Loss aversion",
+"Kahneman and Tversky",
+"Savings behavior",
+"Risk avoidance",
+"Investment decisions",
+"Structural economic constraints",
+"Federal poverty line",
+"Liquidity constraints",
+"Rational choice theory",
+"Nudge-based interventions",
+"Automatic enrollment",
+"Retirement savings programs",
+"Public assistance",
 "Cognitive psychology",
-"Social constructivism",
-"Collective learning"
+"Program uptake rates",
+"Paternalism",
+"Individual autonomy",
+"Income inequality",
+"Economic mobility"
 ]
 ```</pre></td>
-                <td class="score-col"><span class="score score-high">9</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a JSON array of strings containing topics without extra commentary. It successfully focuses on thematic topics and theoretical concepts as specified in the criteria, avoiding the trap of listing scholar names or time periods. The extraction is thorough and captures the major theoretical frameworks discussed in the passage. While there are minor quibbles about whether certain entries are truly distinct topics versus descriptive phrases, these do not violate any mandatory or secondary criteria. The solution demonstrates strong understanding of the task requirements.</td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. It successfully identifies topics spanning the required domains (psychology: cognitive biases, loss aversion; economics: liquidity constraints, rational choice theory; public policy: welfare policy, nudge interventions). While there are minor issues with including researcher names and some overly specific terms that blur the line between topics and metrics, these do not violate mandatory requirements. The solution demonstrates strong topic extraction overall.</td>
             </tr>
         
             <tr>
-                <td>Testing with a highly specialized passage containing dense jargon and nested subtopics (e.g., quantum mechanics with discussions of superposition, entanglement, and decoherence) to check if the model can distinguish primary topics from supporting concepts</td>
-                <td class="prompt-inputs"><strong>content:</strong> Quantum decoherence represents the fundamental mechanism by which quantum systems transition from coherent superposition states to classical mixed states through environmental interaction. When a quantum system becomes entangled with its environment, the off-diagonal elements of the density matrix decay exponentially, effectively destroying quantum interference patterns. This decoherence timescale, typically on the order of femtoseconds for macroscopic objects, explains why superposition states are not observed at classical scales. The process is intimately connected to the measurement problem in quantum mechanics, as environmental decoherence can be viewed as continuous weak measurement. While entanglement between system and environment grows, the reduced density matrix of the system alone becomes increasingly diagonal in the pointer basis, which emerges naturally from the system-environment interaction Hamiltonian. Recent experiments with Schrödinger cat states in superconducting qubits have directly measured decoherence rates, revealing how engineered environments can extend coherence times to milliseconds, a crucial requirement for quantum computing applications.</td>
-                <td class="criteria">• Identifies 'quantum decoherence' as the primary topic<br>• Distinguishes primary topics (e.g., decoherence, entanglement, superposition) from supporting concepts (e.g., density matrices, pointer basis, measurement timescales)<br>• Outputs valid JSON array of strings</td>
+                <td>Testing with a humanities passage rich in historical context, cultural references, and philosophical arguments to check if the prompt can distinguish between main scholarly topics and merely illustrative examples or supporting details</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Renaissance concept of virtù, as articulated by Machiavelli in The Prince, represents a fundamental departure from medieval scholastic ethics rooted in Thomistic natural law. While Aquinas grounded moral virtue in divine reason and eternal law, Machiavelli's virtù emphasizes pragmatic efficacy and the capacity to shape fortuna through decisive action. This philosophical shift mirrors broader transformations in fifteenth-century Florence, where the Medici banking empire exemplified the new commercial ethos. However, to interpret Machiavelli merely as an amoral pragmatist overlooks his republican commitments evident in the Discourses, where civic virtue and institutional stability take precedence. The tension between these works has generated scholarly debate about whether Machiavelli advocated situational ethics or developed a coherent political philosophy that reconciles individual virtù with collective republican values.</td>
+                <td class="criteria">• Identifies main scholarly topics (Machiavelli's concept of virtù, medieval vs. Renaissance ethics, Machiavelli's political philosophy) while excluding illustrative examples (Medici banking, fifteenth-century Florence)<br>• Distinguishes between primary analytical subjects and supporting historical references or citations</td>
                 <td class="output"><pre>```json
 [
-"Quantum decoherence",
-"Coherent superposition states",
-"Classical mixed states",
-"Environmental interaction",
-"Quantum entanglement",
-"Density matrix",
-"Quantum interference patterns",
-"Decoherence timescale",
-"Measurement problem",
-"Weak measurement",
-"Reduced density matrix",
-"Pointer basis",
-"System-environment interaction Hamiltonian",
-"Schrödinger cat states",
-"Superconducting qubits",
-"Coherence times",
-"Quantum computing"
+"Renaissance virtù",
+"Machiavelli",
+"The Prince",
+"Medieval scholastic ethics",
+"Thomistic natural law",
+"Thomas Aquinas",
+"Divine reason",
+"Eternal law",
+"Moral virtue",
+"Fortuna",
+"Fifteenth-century Florence",
+"Medici banking empire",
+"Commercial ethos",
+"Republican commitments",
+"Discourses",
+"Civic virtue",
+"Institutional stability",
+"Situational ethics",
+"Political philosophy"
 ]
 ```</pre></td>
                 <td class="score-col"><span class="score score-medium">6</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings, contains topics from the article, has no extra commentary, and presents only the JSON array. However, it significantly underperforms on the secondary criterion of distinguishing primary topics from supporting concepts. Terms like 'System-environment interaction Hamiltonian', 'Reduced density matrix', and 'Pointer basis' are technical supporting concepts rather than primary topics. While 'Quantum decoherence' is correctly identified as primary, the solution treats all extracted terms equally without proper hierarchical distinction between core topics (decoherence, entanglement, superposition, quantum computing) and their technical underpinnings.</td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings with topics only and no extra commentary. However, it significantly violates the secondary criteria by including illustrative examples (Medici banking empire, fifteenth-century Florence, commercial ethos) that should be excluded as supporting historical references rather than primary analytical subjects. The criteria explicitly states these should be excluded while main scholarly topics should be identified. The solution also fragments some topics unnecessarily while missing key comparative frameworks.</td>
             </tr>
         
             <tr>
-                <td>Testing with an interdisciplinary passage combining multiple research domains (e.g., climate science, economics, and public policy) to verify the model can identify topics across different fields within a single text</td>
-                <td class="prompt-inputs"><strong>content:</strong> Climate-induced migration patterns are reshaping labor markets and fiscal policy frameworks across developing nations. Rising sea levels and increased drought frequency have displaced approximately 21 million people annually since 2008, creating unprecedented challenges for urban infrastructure planning and social welfare systems. The economic implications are substantial: host regions experience GDP volatility averaging 3.2% as labor supply shocks interact with existing unemployment rates, while remittance flows from displaced workers contribute an estimated $45 billion annually to origin communities. Policymakers face competing priorities between climate adaptation investments, which require upfront capital expenditures of 1-2% of GDP, and immediate humanitarian assistance programs. Carbon pricing mechanisms, including cap-and-trade systems implemented in 64 jurisdictions, generate revenue streams that some governments allocate toward climate refugee integration programs, though cost-benefit analyses reveal significant temporal mismatches between mitigation spending and adaptation needs. Public health outcomes further complicate policy design, as displaced populations show 40% higher incidence of waterborne diseases and mental health disorders, straining healthcare budgets already constrained by climate-related infrastructure damage.</td>
-                <td class="criteria">• Identifies topics from climate science domain (e.g., sea level rise, drought, climate adaptation)<br>• Identifies topics from economics domain (e.g., labor markets, GDP, remittances, carbon pricing)<br>• Identifies topics from public policy domain (e.g., fiscal policy, social welfare, infrastructure planning)</td>
+                <td>Testing with a highly specialized physics article containing both theoretical concepts (quantum mechanics, relativity) and practical applications (experimental methods, instrumentation) to ensure extraction of both abstract and concrete topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The phenomenon of quantum entanglement in photon pairs provides a testbed for Bell inequality violations and foundational tests of non-locality in quantum mechanics. Recent experiments utilizing spontaneous parametric down-conversion in beta-barium borate crystals have achieved entanglement fidelities exceeding 99.8%, enabling unprecedented precision in quantum state tomography. These advances intersect with general relativity through proposals for quantum communication protocols that must account for relativistic effects in satellite-based quantum key distribution systems. The experimental apparatus employs single-photon avalanche diodes operating at liquid nitrogen temperatures, coupled with time-correlated single photon counting modules that achieve temporal resolution below 50 picoseconds, facilitating measurements of coincidence rates essential for verifying quantum correlations across space-like separated detection events.</td>
+                <td class="criteria">• Extracts both theoretical physics concepts (quantum entanglement, Bell inequalities, non-locality, general relativity) and experimental/instrumentation topics (parametric down-conversion, quantum state tomography, avalanche diodes, photon counting)<br>• Returns output as a JSON array of strings</td>
                 <td class="output"><pre>```json
 [
-"Climate-induced migration",
-"Labor markets",
-"Fiscal policy",
-"Sea level rise",
-"Drought",
-"Urban infrastructure planning",
-"Social welfare systems",
-"GDP volatility",
-"Labor supply shocks",
-"Unemployment",
-"Remittance flows",
-"Climate adaptation",
-"Humanitarian assistance",
-"Carbon pricing",
-"Cap-and-trade systems",
-"Climate refugee integration",
-"Cost-benefit analysis",
-"Mitigation spending",
-"Public health",
-"Waterborne diseases",
-"Mental health disorders",
-"Healthcare budgets"
+"Quantum entanglement",
+"Photon pairs",
+"Bell inequality violations",
+"Non-locality",
+"Quantum mechanics",
+"Spontaneous parametric down-conversion",
+"Beta-barium borate crystals",
+"Entanglement fidelity",
+"Quantum state tomography",
+"General relativity",
+"Quantum communication protocols",
+"Relativistic effects",
+"Satellite-based quantum key distribution",
+"Single-photon avalanche diodes",
+"Time-correlated single photon counting",
+"Temporal resolution",
+"Coincidence rates",
+"Quantum correlations",
+"Space-like separated detection events"
 ]
 ```</pre></td>
-                <td class="score-col"><span class="score score-high">9</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing only topics without commentary. It successfully identifies topics across all three required domains (climate science, economics, and public policy). The extracted topics are accurate and directly traceable to the source text. While there are minor issues with granularity and consistency in abstraction levels, these do not violate any mandatory or secondary criteria. The solution demonstrates thorough extraction of relevant topics from the scholarly passage.</td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a JSON array of strings containing topics from the article with no extra commentary. It successfully extracts both theoretical and experimental topics as specified in the secondary criteria. The extraction is comprehensive and well-formatted. While there are minor questions about topic granularity (some entries could be considered supporting details rather than primary topics), the criteria do not specify a particular level of abstraction, and all extracted items are legitimately mentioned in the source text. The solution fulfills both mandatory and secondary criteria effectively.</td>
             </tr>
         
             </tbody>

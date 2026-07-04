@@ -117,11 +117,11 @@
                 </div>
                 <div class="stat-box">
                     <div>Average Score</div>
-                    <div class="stat-value">8.0 / 10</div>
+                    <div class="stat-value">9.0 / 10</div>
                 </div>
                 <div class="stat-box">
                     <div>Pass Rate (≥7)</div>
-                    <div class="stat-value">66.7%</div>
+                    <div class="stat-value">100.0%</div>
                 </div>
             </div>
         </div>
@@ -140,101 +140,102 @@
             <tbody>
     
             <tr>
-                <td>Testing with an interdisciplinary social sciences passage that blends psychology, economics, and public policy topics to verify the prompt can identify overlapping themes across multiple academic domains</td>
-                <td class="prompt-inputs"><strong>content:</strong> Behavioral economics research demonstrates that cognitive biases significantly influence financial decision-making among low-income households, with implications for welfare policy design. Loss aversion, first documented by Kahneman and Tversky, manifests when individuals weight potential losses approximately 2.5 times more heavily than equivalent gains, leading to suboptimal savings behavior and risk avoidance in investment decisions. This psychological phenomenon intersects with structural economic constraints: households earning below 200% of the federal poverty line face liquidity constraints that rational choice theory alone cannot explain. Policymakers have responded by implementing nudge-based interventions, such as automatic enrollment in retirement savings programs and simplified application processes for public assistance, which leverage insights from cognitive psychology to improve program uptake rates by 40-60%. However, critics argue these paternalistic approaches may undermine individual autonomy while failing to address underlying income inequality and systemic barriers to economic mobility.</td>
-                <td class="criteria">• Identifies topics spanning psychology, economics, and public policy domains<br>• Extracts topics as a JSON array of strings</td>
+                <td>Testing with a methodological passage describing research procedures and statistical analysis to verify if the prompt distinguishes between methodology topics versus subject matter topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> Data were collected from 156 participants recruited through stratified random sampling across three urban centers. The study employed a mixed-methods design combining quantitative surveys and semi-structured interviews. Participants completed the Beck Depression Inventory-II (BDI-II) and a custom 32-item Likert scale measuring social media engagement patterns. Statistical analysis was performed using SPSS version 27. Normality assumptions were tested using Shapiro-Wilk tests, and since data violated normality (p < 0.05), non-parametric Spearman correlations were calculated to examine relationships between variables. Multiple regression analysis with bootstrapping (5000 iterations) was conducted to control for confounding variables including age, gender, and socioeconomic status. Qualitative data from interviews were transcribed verbatim and analyzed using thematic analysis following Braun and Clarke's six-phase framework.</td>
+                <td class="criteria">• Identifies methodological topics (e.g., sampling methods, statistical tests, research design) rather than confusing them with subject matter topics<br>• Extracts topics as a JSON array of strings</td>
                 <td class="output"><pre>```json
 [
-"Behavioral economics",
-"Cognitive biases",
-"Financial decision-making",
-"Low-income households",
-"Welfare policy design",
-"Loss aversion",
-"Kahneman and Tversky",
-"Savings behavior",
-"Risk avoidance",
-"Investment decisions",
-"Structural economic constraints",
-"Federal poverty line",
-"Liquidity constraints",
-"Rational choice theory",
-"Nudge-based interventions",
-"Automatic enrollment",
-"Retirement savings programs",
-"Public assistance",
-"Cognitive psychology",
-"Program uptake rates",
-"Paternalism",
-"Individual autonomy",
-"Income inequality",
-"Economic mobility"
+"Stratified random sampling",
+"Mixed-methods design",
+"Quantitative surveys",
+"Semi-structured interviews",
+"Beck Depression Inventory-II",
+"Likert scale",
+"Social media engagement patterns",
+"SPSS",
+"Normality assumptions",
+"Shapiro-Wilk tests",
+"Non-parametric statistics",
+"Spearman correlations",
+"Multiple regression analysis",
+"Bootstrapping",
+"Confounding variables",
+"Socioeconomic status",
+"Qualitative data analysis",
+"Thematic analysis",
+"Braun and Clarke's six-phase framework"
 ]
 ```</pre></td>
                 <td class="score-col"><span class="score score-high">8</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. It successfully identifies topics spanning the required domains (psychology: cognitive biases, loss aversion; economics: liquidity constraints, rational choice theory; public policy: welfare policy, nudge interventions). While there are minor issues with including researcher names and some overly specific terms that blur the line between topics and metrics, these do not violate mandatory requirements. The solution demonstrates strong topic extraction overall.</td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings, contains only topics without commentary, and presents nothing but the JSON array. It successfully identifies methodological topics rather than subject matter. However, there are minor issues with topic selection - 'Socioeconomic status' is questionable as it's a variable being controlled for rather than a methodological topic, and there are slight inconsistencies in the level of abstraction across entries. These are relatively minor deficiencies that don't violate mandatory requirements but prevent a perfect score.</td>
             </tr>
         
             <tr>
-                <td>Testing with a humanities passage rich in historical context, cultural references, and philosophical arguments to check if the prompt can distinguish between main scholarly topics and merely illustrative examples or supporting details</td>
-                <td class="prompt-inputs"><strong>content:</strong> The Renaissance concept of virtù, as articulated by Machiavelli in The Prince, represents a fundamental departure from medieval scholastic ethics rooted in Thomistic natural law. While Aquinas grounded moral virtue in divine reason and eternal law, Machiavelli's virtù emphasizes pragmatic efficacy and the capacity to shape fortuna through decisive action. This philosophical shift mirrors broader transformations in fifteenth-century Florence, where the Medici banking empire exemplified the new commercial ethos. However, to interpret Machiavelli merely as an amoral pragmatist overlooks his republican commitments evident in the Discourses, where civic virtue and institutional stability take precedence. The tension between these works has generated scholarly debate about whether Machiavelli advocated situational ethics or developed a coherent political philosophy that reconciles individual virtù with collective republican values.</td>
-                <td class="criteria">• Identifies main scholarly topics (Machiavelli's concept of virtù, medieval vs. Renaissance ethics, Machiavelli's political philosophy) while excluding illustrative examples (Medici banking, fifteenth-century Florence)<br>• Distinguishes between primary analytical subjects and supporting historical references or citations</td>
+                <td>Testing with a highly specialized passage containing dense jargon from a niche field (e.g., quantum chromodynamics or medieval paleography) to assess extraction of technical domain-specific topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The perturbative expansion of quantum chromodynamics at next-to-next-to-leading order (NNLO) reveals intricate renormalization group flow patterns in the strong coupling constant αs, particularly when examining asymptotic freedom in the ultraviolet regime. Recent lattice QCD calculations employing Wilson fermions with O(a) improvement have constrained the gluon propagator in Landau gauge, demonstrating infrared enhancement consistent with the Gribov-Zwanziger confinement scenario. The operator product expansion (OPE) framework facilitates factorization of hard and soft contributions in deep inelastic scattering, where higher-twist corrections become non-negligible at moderate Q² values. Chiral perturbation theory provides an effective field theory description of the Goldstone bosons arising from spontaneous chiral symmetry breaking, with low-energy constants determined through pion-nucleon scattering data and kaon decay amplitudes.</td>
+                <td class="criteria">• Extracts technical domain-specific topics from quantum chromodynamics<br>• Returns output as a JSON array of strings</td>
                 <td class="output"><pre>```json
 [
-"Renaissance virtù",
-"Machiavelli",
-"The Prince",
-"Medieval scholastic ethics",
-"Thomistic natural law",
-"Thomas Aquinas",
-"Divine reason",
-"Eternal law",
-"Moral virtue",
-"Fortuna",
-"Fifteenth-century Florence",
-"Medici banking empire",
-"Commercial ethos",
-"Republican commitments",
-"Discourses",
-"Civic virtue",
-"Institutional stability",
-"Situational ethics",
-"Political philosophy"
-]
-```</pre></td>
-                <td class="score-col"><span class="score score-medium">6</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings with topics only and no extra commentary. However, it significantly violates the secondary criteria by including illustrative examples (Medici banking empire, fifteenth-century Florence, commercial ethos) that should be excluded as supporting historical references rather than primary analytical subjects. The criteria explicitly states these should be excluded while main scholarly topics should be identified. The solution also fragments some topics unnecessarily while missing key comparative frameworks.</td>
-            </tr>
-        
-            <tr>
-                <td>Testing with a highly specialized physics article containing both theoretical concepts (quantum mechanics, relativity) and practical applications (experimental methods, instrumentation) to ensure extraction of both abstract and concrete topics</td>
-                <td class="prompt-inputs"><strong>content:</strong> The phenomenon of quantum entanglement in photon pairs provides a testbed for Bell inequality violations and foundational tests of non-locality in quantum mechanics. Recent experiments utilizing spontaneous parametric down-conversion in beta-barium borate crystals have achieved entanglement fidelities exceeding 99.8%, enabling unprecedented precision in quantum state tomography. These advances intersect with general relativity through proposals for quantum communication protocols that must account for relativistic effects in satellite-based quantum key distribution systems. The experimental apparatus employs single-photon avalanche diodes operating at liquid nitrogen temperatures, coupled with time-correlated single photon counting modules that achieve temporal resolution below 50 picoseconds, facilitating measurements of coincidence rates essential for verifying quantum correlations across space-like separated detection events.</td>
-                <td class="criteria">• Extracts both theoretical physics concepts (quantum entanglement, Bell inequalities, non-locality, general relativity) and experimental/instrumentation topics (parametric down-conversion, quantum state tomography, avalanche diodes, photon counting)<br>• Returns output as a JSON array of strings</td>
-                <td class="output"><pre>```json
-[
-"Quantum entanglement",
-"Photon pairs",
-"Bell inequality violations",
-"Non-locality",
-"Quantum mechanics",
-"Spontaneous parametric down-conversion",
-"Beta-barium borate crystals",
-"Entanglement fidelity",
-"Quantum state tomography",
-"General relativity",
-"Quantum communication protocols",
-"Relativistic effects",
-"Satellite-based quantum key distribution",
-"Single-photon avalanche diodes",
-"Time-correlated single photon counting",
-"Temporal resolution",
-"Coincidence rates",
-"Quantum correlations",
-"Space-like separated detection events"
+"Quantum chromodynamics",
+"Perturbative expansion",
+"Next-to-next-to-leading order (NNLO)",
+"Renormalization group flow",
+"Strong coupling constant",
+"Asymptotic freedom",
+"Lattice QCD",
+"Wilson fermions",
+"Gluon propagator",
+"Landau gauge",
+"Infrared enhancement",
+"Gribov-Zwanziger confinement scenario",
+"Operator product expansion",
+"Factorization",
+"Deep inelastic scattering",
+"Higher-twist corrections",
+"Chiral perturbation theory",
+"Effective field theory",
+"Goldstone bosons",
+"Spontaneous chiral symmetry breaking",
+"Low-energy constants",
+"Pion-nucleon scattering",
+"Kaon decay amplitudes"
 ]
 ```</pre></td>
                 <td class="score-col"><span class="score score-high">10</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it is a JSON array of strings containing topics from the article with no extra commentary. It successfully extracts both theoretical and experimental topics as specified in the secondary criteria. The extraction is comprehensive and well-formatted. While there are minor questions about topic granularity (some entries could be considered supporting details rather than primary topics), the criteria do not specify a particular level of abstraction, and all extracted items are legitimately mentioned in the source text. The solution fulfills both mandatory and secondary criteria effectively.</td>
+                <td class="reasoning">The solution fully meets all mandatory requirements: it contains a valid JSON array of strings with topics extracted from the article, each string contains only the topic without commentary, and the response contains only the JSON array. The solution successfully extracts all major technical topics from the quantum chromodynamics passage, including specialized terms like NNLO, lattice QCD methods, and theoretical frameworks. The topics are appropriately domain-specific and accurately represent the content. Minor variations in granularity are acceptable given the complexity of the source material and do not constitute a significant deficiency.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an interdisciplinary passage that blends multiple academic fields (e.g., neuroscience, philosophy, and AI ethics) to evaluate if the prompt can identify and separate overlapping topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The integration of artificial neural networks into cognitive neuroscience research has raised profound questions about the nature of consciousness and moral agency. Recent fMRI studies demonstrate that deep learning models trained on visual recognition tasks exhibit activation patterns remarkably similar to those observed in the human ventral visual stream, suggesting potential computational homologies between biological and artificial systems. This convergence has prompted philosophers of mind to reconsider functionalist theories of consciousness, particularly whether substrate-independent information processing could constitute phenomenal experience. Meanwhile, ethicists grapple with the implications for moral responsibility: if AI systems achieve decision-making capacities that mirror human neural processes, do we need new frameworks for attributing accountability? Neuroscientific evidence indicates that moral judgments engage both emotional circuits in the limbic system and rational deliberation in the prefrontal cortex, yet current machine learning architectures lack genuine affective states, creating what some call the 'responsibility gap' in autonomous systems.</td>
+                <td class="criteria">• Identifies topics from neuroscience, philosophy, and AI ethics domains<br>• Separates overlapping interdisciplinary topics into distinct entries<br>• Returns output as a JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+"Artificial neural networks",
+"Cognitive neuroscience",
+"Consciousness",
+"Moral agency",
+"fMRI studies",
+"Deep learning",
+"Visual recognition",
+"Ventral visual stream",
+"Computational homologies",
+"Functionalist theories",
+"Substrate-independent information processing",
+"Phenomenal experience",
+"Moral responsibility",
+"Accountability",
+"Moral judgments",
+"Limbic system",
+"Prefrontal cortex",
+"Machine learning architectures",
+"Affective states",
+"Responsibility gap",
+"Autonomous systems"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. It successfully identifies topics across the three required domains (neuroscience, philosophy, AI ethics) and separates overlapping interdisciplinary concepts into distinct entries. While some extracted items could be debated as being overly specific anatomical terms or methodologies rather than broader topics, the task description does not explicitly exclude these, and they are legitimately mentioned in the source text. The solution demonstrates thorough extraction and proper formatting.</td>
             </tr>
         
             </tbody>

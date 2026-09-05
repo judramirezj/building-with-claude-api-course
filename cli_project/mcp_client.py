@@ -82,7 +82,7 @@ async def main():
         args=["run", "mcp_server.py"],
     ) as _client:
         result = await _client.list_tools()
-        return result
+        print(result)
 
 
 if __name__ == "__main__":

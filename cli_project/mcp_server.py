@@ -48,7 +48,7 @@ def list_docs() -> list[str]:
 
 @mcp.resource(
     "docs://document/{doc_id}",
-    mime_type="text"
+    mime_type="text/plain"
 )
 def fetch_doc(doc_id: str) -> str:
     if doc_id not in docs:

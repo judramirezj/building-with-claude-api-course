@@ -37,6 +37,10 @@ markdown, via `BytesIO` + `StreamInfo(extension=...)`. Test fixtures
 (`tests/fixtures/mcp_docs.{docx,pdf}`) are real sample documents used to verify conversion
 end to end.
 
+## Conventions
+
+- Always apply appropriate type annotations to function arguments and return types.
+
 ## Defining MCP tools
 
 **Two registration styles, both valid:**
